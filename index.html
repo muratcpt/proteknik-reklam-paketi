@@ -1,148 +1,246 @@
 <!DOCTYPE html>
 <html lang="tr"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Profesyonel Teknik Servis — Instagram Reklam Paketi</title>
+<title>Sosyal Medya Yönetimi Teklifi — Profesyonel Teknik Servis</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;}
-  body{background:#0B1B38;color:#fff;padding:48px 18px 90px;}
-  .wrap{max-width:1100px;margin:0 auto;}
-  header{text-align:center;margin-bottom:44px;}
-  .logo{width:74px;height:74px;border-radius:18px;background:linear-gradient(135deg,#F5B301,#E08700);
-    display:inline-flex;align-items:center;justify-content:center;font-size:38px;margin-bottom:18px;
+  body{background:#0B1B38;color:#fff;padding:42px 18px 90px;}
+  .wrap{max-width:1280px;margin:0 auto;}
+
+  header{text-align:center;margin-bottom:40px;}
+  .logo{width:72px;height:72px;border-radius:18px;background:linear-gradient(135deg,#F5B301,#E08700);
+    display:inline-flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:16px;
     box-shadow:0 10px 26px rgba(245,179,1,.4);}
-  header h1{font-size:32px;font-weight:800;}
-  header p{color:#aebbd2;font-size:17px;margin-top:8px;}
-  header .meta2{color:#F5B301;font-weight:700;margin-top:10px;font-size:14px;letter-spacing:1.5px;}
-  .hint{max-width:640px;margin:22px auto 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);
-    border-radius:14px;padding:14px 20px;color:#cdd6e6;font-size:14.5px;line-height:1.5;}
-  .grid{display:flex;flex-direction:column;gap:36px;}
-  .card{background:#0F2247;border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;
-    display:flex;flex-wrap:wrap;box-shadow:0 14px 40px rgba(0,0,0,.3);}
-  .imgwrap{flex:1 1 380px;background:#000;display:flex;align-items:stretch;}
+  header .kick{color:#F5B301;font-weight:800;letter-spacing:2.5px;font-size:14px;}
+  header h1{font-size:32px;font-weight:800;margin-top:8px;line-height:1.2;}
+  header p{color:#aebbd2;font-size:17px;margin-top:10px;}
+
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:34px;align-items:start;}
+  .colhead{font-size:15px;font-weight:800;letter-spacing:2px;color:#7f8db0;text-transform:uppercase;
+    margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,.1);}
+
+  /* ───── SOL: ÖRNEK ÇALIŞMALAR ───── */
+  .samples .grid{display:flex;flex-direction:column;gap:26px;}
+  .card{background:#0F2247;border:1px solid rgba(255,255,255,.08);border-radius:20px;overflow:hidden;
+    display:flex;flex-wrap:wrap;box-shadow:0 12px 34px rgba(0,0,0,.28);}
+  .imgwrap{flex:1 1 320px;background:#000;}
   .imgwrap a{display:block;width:100%;}
   .imgwrap img{width:100%;height:auto;display:block;transition:opacity .2s;}
   .imgwrap a:hover img{opacity:.9;}
-  .meta{flex:1 1 360px;padding:30px 30px;min-width:290px;display:flex;flex-direction:column;}
-  .meta h2{font-size:25px;font-weight:800;color:#FFCB3E;margin-bottom:8px;}
-  .num{font-size:13px;font-weight:700;color:#7f8db0;letter-spacing:2px;}
-  .cap{font-size:16px;line-height:1.6;color:#dde5f2;margin-top:14px;white-space:pre-line;}
-  .dl{margin-top:18px;}
-  .dl a{display:inline-block;background:#F5B301;color:#0B1B38;font-weight:700;font-size:14px;
-    text-decoration:none;padding:11px 20px;border-radius:11px;}
+  .meta{flex:1 1 320px;padding:26px 26px;min-width:280px;display:flex;flex-direction:column;}
+  .meta .num{font-size:12px;font-weight:700;color:#7f8db0;letter-spacing:2px;}
+  .meta h2{font-size:23px;font-weight:800;color:#FFCB3E;margin:6px 0 12px;}
+  .cap{font-size:15px;line-height:1.55;color:#dde5f2;white-space:pre-line;}
+  .dl{margin-top:16px;}
+  .dl a{display:inline-block;background:#F5B301;color:#0B1B38;font-weight:700;font-size:13px;
+    text-decoration:none;padding:10px 18px;border-radius:10px;}
   .dl a:hover{background:#ffcb3e;}
-  .htag{margin-top:auto;padding-top:18px;font-size:13px;color:#7f8db0;line-height:1.6;
+  .htag{margin-top:auto;padding-top:16px;font-size:12px;color:#7f8db0;line-height:1.6;
     border-top:1px solid rgba(255,255,255,.08);word-break:break-word;}
-  footer{text-align:center;margin-top:54px;color:#8593b3;font-size:14.5px;line-height:1.9;}
+
+  /* ───── SAĞ: HİZMET PAKETLERİ ───── */
+  .pkg{background:#0F2247;border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:26px 24px;
+    margin-bottom:22px;position:relative;}
+  .pkg.pop{border:2px solid #F5B301;box-shadow:0 0 0 4px rgba(245,179,1,.12),0 18px 40px rgba(0,0,0,.35);}
+  .popbadge{position:absolute;top:-13px;right:22px;background:linear-gradient(135deg,#F5B301,#E08700);
+    color:#0B1B38;font-weight:800;font-size:12px;letter-spacing:1px;padding:6px 14px;border-radius:999px;}
+  .pkg .ptag{font-size:12px;font-weight:800;letter-spacing:2px;color:#FF8A3D;}
+  .pkg h3{font-size:21px;font-weight:800;margin:6px 0 4px;line-height:1.25;}
+  .price{display:flex;align-items:baseline;gap:6px;margin:14px 0 6px;}
+  .price .amt{font-size:42px;font-weight:900;color:#F5B301;letter-spacing:-1px;}
+  .price .per{font-size:16px;font-weight:600;color:#aebbd2;}
+  .pkg ul{list-style:none;margin:16px 0 0;}
+  .pkg li{font-size:14.5px;line-height:1.5;color:#dde5f2;padding:7px 0 7px 28px;position:relative;}
+  .pkg li::before{content:"✓";position:absolute;left:0;color:#28C76F;font-weight:900;}
+  .pkg li.muted{color:#8593b3;}
+  .pkg li.muted::before{content:"•";color:#6a7689;}
+  .thumbs-lbl{font-size:12px;font-weight:700;letter-spacing:1px;color:#7f8db0;margin:18px 0 8px;text-transform:uppercase;}
+  .thumbs{display:flex;gap:8px;flex-wrap:wrap;}
+  .thumbs img{width:62px;height:78px;object-fit:cover;border-radius:8px;border:1px solid rgba(255,255,255,.14);}
+  .btn{display:block;text-align:center;margin-top:20px;font-weight:800;font-size:15px;text-decoration:none;
+    padding:14px;border-radius:12px;}
+  .btn.gold{background:linear-gradient(135deg,#F5B301,#EFA600);color:#0B1B38;}
+  .btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,.25);color:#fff;}
+  .btn:hover{filter:brightness(1.06);}
+
+  #iletisim{background:linear-gradient(135deg,#0F2247,#15336a);border:1px solid rgba(245,179,1,.3);
+    border-radius:18px;padding:24px;text-align:center;}
+  #iletisim .t{font-weight:800;font-size:18px;color:#FFCB3E;}
+  #iletisim .c{font-size:16px;color:#dde5f2;margin-top:10px;line-height:1.7;}
+  #iletisim .ph{font-weight:800;font-size:22px;color:#fff;}
+
+  footer{text-align:center;margin-top:50px;color:#8593b3;font-size:14px;line-height:1.9;}
   footer b{color:#F5B301;}
+
+  @media(max-width:980px){
+    .layout{display:flex;flex-direction:column;}
+    .packages{order:-1;}
+  }
 </style></head>
 <body><div class="wrap">
+
   <header>
-    <div class="logo">🛠️</div>
-    <h1>Profesyonel Teknik Servis</h1>
-    <p>Instagram Reklam Paketi · 7 yayına hazır görsel (1080×1350)</p>
-    <div class="meta2">ÇANAKKALE MERKEZ · SOSYAL MEDYA DANIŞMANLIĞI</div>
-    <div class="hint">📲 Her görsele <b>tıklayınca tam boy açılır</b>; altındaki <b>İndir</b> butonuyla telefona/bilgisayara kaydedebilirsiniz. Altyazı (caption) ve hashtag'ler her görselin yanında hazır.</div>
+    <div class="logo">📣</div>
+    <div class="kick">SOSYAL MEDYA YÖNETİMİ TEKLİFİ</div>
+    <h1>Profesyonel Teknik Servis için<br>Sosyal Medya Çözümleri</h1>
+    <p>Markanız için hazırladığımız örnek reklamlar ve size özel hizmet paketleri.</p>
   </header>
 
-  <div class="grid">
+  <div class="layout">
 
-    <div class="card">
-      <div class="imgwrap"><a href="reklam-A-hizmet.png" target="_blank"><img src="reklam-A-hizmet.png" alt="Genel Hizmet Tanıtımı"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 01</div>
-        <h2>Genel Hizmet Tanıtımı</h2>
-        <div class="cap">📱 Cihazın ne olursa olsun tek elden, güvenle.
+    <!-- ════════ SOL · ÖRNEK ÇALIŞMALAR ════════ -->
+    <main class="samples">
+      <div class="colhead">📁 Örnek Reklam Çalışmaları (7 Görsel)</div>
+      <div class="grid">
 
-Telefon · tablet · bilgisayar — ekran, batarya, su hasarı, anakart, bilgisayar bakımı ve veri kurtarma hepsi Çanakkale Merkez'de. Arıza tespiti ücretsiz, fiyatı işleme başlamadan söyleriz, 12 ay garantiyle teslim ederiz.
+        <div class="card">
+          <div class="imgwrap"><a href="reklam-A-hizmet.png" target="_blank"><img src="reklam-A-hizmet.png" alt="Genel Hizmet Tanıtımı"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 01</div><h2>Genel Hizmet Tanıtımı</h2>
+            <div class="cap">📱 Cihazın ne olursa olsun tek elden, güvenle. Telefon · tablet · bilgisayar; ekran, batarya, su hasarı, anakart, bilgisayar bakımı ve veri kurtarma. Ücretsiz arıza tespiti, net fiyat, 12 ay garanti.
 
 📞 0538 247 66 33 · 💬 wa.me/905382476633</div>
-        <div class="dl"><a href="reklam-A-hizmet.png" download>⬇ İndir</a></div>
-        <div class="htag">#çanakkale #çanakkaleteknikservis #telefontamiri #ekrandeğişimi #bataryadeğişimi #verikurtarma #teknikservis #çanakkaleesnaf</div>
+            <div class="dl"><a href="reklam-A-hizmet.png" download>⬇ İndir</a></div>
+            <div class="htag">#çanakkale #çanakkaleteknikservis #telefontamiri #ekrandeğişimi #verikurtarma #teknikservis</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="reklam-B-ekran.png" target="_blank"><img src="reklam-B-ekran.png" alt="Kırık Ekran Kampanyası"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 02</div><h2>Kırık Ekran Kampanyası</h2>
+            <div class="cap">Ekranın mı kırıldı? Orijinal kalite parçayla çoğu modelde 30-60 dakikada aynı gün teslim. 12 ay garanti, net fiyat, ücretsiz arıza tespiti. Apple, Samsung, Xiaomi ve tüm modeller.</div>
+            <div class="dl"><a href="reklam-B-ekran.png" download>⬇ İndir</a></div>
+            <div class="htag">#çanakkaleekrandeğişimi #ekrandeğişimi #iphonetamiri #samsungtamiri #aynıgünteslim</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="seri-1-batarya.png" target="_blank"><img src="seri-1-batarya.png" alt="Batarya Değişimi"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 03</div><h2>Batarya Değişimi</h2>
+            <div class="cap">Telefonun şarjı çabuk mu bitiyor, açılıp kapanıyor ya da arka kapağı şişti mi? Yüksek kapasiteli yeni batarya ~30 dakikada. Sağlık ve performans testiyle teslim, 12 ay garanti.</div>
+            <div class="dl"><a href="seri-1-batarya.png" download>⬇ İndir</a></div>
+            <div class="htag">#bataryadeğişimi #şişenbatarya #çanakkaletelefontamiri #iphonebatarya</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="seri-2-su.png" target="_blank"><img src="seri-2-su.png" alt="Su Hasarı"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 04</div><h2>Su Hasarı & Sıvı Teması</h2>
+            <div class="cap">Telefonun suya mı düştü? Önce kapat, hemen getir. Ultrasonik temizlik ve korozyon giderme ile kurtarma — verilerini koruyarak. "Kurtarılmaz" deneni anakart seviyesinde çözüyoruz.</div>
+            <div class="dl"><a href="seri-2-su.png" download>⬇ İndir</a></div>
+            <div class="htag">#suyadüşentelefon #suhasarı #anakarttamiri #çanakkaletelefontamiri</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="seri-3-anakart.png" target="_blank"><img src="seri-3-anakart.png" alt="Anakart & Mikro Lehim"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 05</div><h2>Anakart & Mikro Lehim</h2>
+            <div class="cap">Telefonun hiç mi açılmıyor? Şarj almıyor, görüntü vermiyor mu? Mikroskop altında kart seviyesi onarım — başka servislerin "olmaz" dediğini çözüyoruz. Net fiyat, 12 ay garanti.</div>
+            <div class="dl"><a href="seri-3-anakart.png" download>⬇ İndir</a></div>
+            <div class="htag">#anakarttamiri #mikrolehim #açılmayantelefon #çanakkaletelefontamiri</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="seri-4-bilgisayar.png" target="_blank"><img src="seri-4-bilgisayar.png" alt="Bilgisayar & Laptop"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 06</div><h2>Bilgisayar & Laptop</h2>
+            <div class="cap">Bilgisayarın mı yavaşladı, ısınıyor mu, açılmıyor mu? SSD/RAM yükseltme, format, fan ve ısınma bakımıyla uçar hale getiriyoruz. 12 ay garanti, ücretsiz arıza tespiti.</div>
+            <div class="dl"><a href="seri-4-bilgisayar.png" download>⬇ İndir</a></div>
+            <div class="htag">#bilgisayartamiri #laptoptamiri #ssdyükseltme #çanakkalebilgisayar</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="imgwrap"><a href="seri-5-veri.png" target="_blank"><img src="seri-5-veri.png" alt="Veri Kurtarma"></a></div>
+          <div class="meta">
+            <div class="num">REKLAM 07</div><h2>Veri Kurtarma</h2>
+            <div class="cap">Fotoğrafların, dosyaların mı silindi? Açılmayan telefon, bozuk hafıza kartı ve hard diskten veri kurtarma — gizlilik garantili. Ücretsiz ön inceleme.</div>
+            <div class="dl"><a href="seri-5-veri.png" download>⬇ İndir</a></div>
+            <div class="htag">#verikurtarma #silinendosya #hafızakartı #harddisk #teknikservis</div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </main>
 
-    <div class="card">
-      <div class="imgwrap"><a href="reklam-B-ekran.png" target="_blank"><img src="reklam-B-ekran.png" alt="Kırık Ekran Kampanyası"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 02</div>
-        <h2>Kırık Ekran Kampanyası</h2>
-        <div class="cap">Ekranın mı kırıldı? Orijinal kalite parçayla, çoğu modelde 30-60 dakikada aynı gün teslim. 12 ay garanti, net fiyat, ücretsiz arıza tespiti. Apple, Samsung, Xiaomi ve tüm modeller.
+    <!-- ════════ SAĞ · HİZMET PAKETLERİ ════════ -->
+    <aside class="packages">
+      <div class="colhead">💼 Hizmet Paketleri</div>
 
-Modelini WhatsApp'tan yaz, net fiyatı dakikalar içinde söyleyelim.</div>
-        <div class="dl"><a href="reklam-B-ekran.png" download>⬇ İndir</a></div>
-        <div class="htag">#çanakkale #çanakkaleekrandeğişimi #ekrandeğişimi #iphonetamiri #samsungtamiri #telefontamiri #aynıgünteslim #çanakkaleteknikservis</div>
+      <!-- Paket 1 -->
+      <div class="pkg">
+        <div class="ptag">PAKET 1</div>
+        <h3>Sosyal Medya Reklam Yönetimi</h3>
+        <div class="price"><span class="amt">₺5.000</span><span class="per">/ ay</span></div>
+        <ul>
+          <li>Instagram & Facebook reklam kurulumu</li>
+          <li>Çanakkale hedef kitle & bölge optimizasyonu</li>
+          <li>Kampanya takibi ve bütçe yönetimi</li>
+          <li>Aylık performans raporu</li>
+          <li class="muted">Reklam bütçesi ayrıca (size aittir)</li>
+        </ul>
+        <a class="btn ghost" href="#iletisim">Bu Paketi Seç</a>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="imgwrap"><a href="seri-1-batarya.png" target="_blank"><img src="seri-1-batarya.png" alt="Batarya Değişimi"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 03</div>
-        <h2>Batarya Değişimi</h2>
-        <div class="cap">Telefonun şarjı çabuk mu bitiyor, açılıp kapanıyor ya da arka kapağı şişti mi? Yüksek kapasiteli yeni batarya ~30 dakikada. Sağlık ve performans testiyle teslim, 12 ay garanti.
-
-📞 0538 247 66 33</div>
-        <div class="dl"><a href="seri-1-batarya.png" download>⬇ İndir</a></div>
-        <div class="htag">#bataryadeğişimi #şişenbatarya #çanakkaletelefontamiri #telefontamiri #çanakkale #teknikservis #iphonebatarya</div>
+      <!-- Paket 2 -->
+      <div class="pkg">
+        <div class="ptag">PAKET 2</div>
+        <h3>Haftada 1 Post + 1 Story</h3>
+        <div class="price"><span class="amt">₺7.500</span><span class="per">/ ay</span></div>
+        <ul>
+          <li>Ayda 4 özgün gönderi tasarımı</li>
+          <li>Ayda 4 story tasarımı</li>
+          <li>Caption + hashtag yönetimi</li>
+          <li>Aylık içerik takvimi</li>
+        </ul>
+        <div class="thumbs-lbl">Örnek gönderilerimizden</div>
+        <div class="thumbs">
+          <img src="reklam-B-ekran.png" alt=""><img src="seri-1-batarya.png" alt=""><img src="seri-3-anakart.png" alt="">
+        </div>
+        <a class="btn ghost" href="#iletisim">Bu Paketi Seç</a>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="imgwrap"><a href="seri-2-su.png" target="_blank"><img src="seri-2-su.png" alt="Su Hasarı"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 04</div>
-        <h2>Su Hasarı & Sıvı Teması</h2>
-        <div class="cap">Telefonun suya mı düştü? Önce kapat, hemen getir. Ultrasonik temizlik ve korozyon giderme ile kurtarma — verilerini koruyarak. "Kurtarılmaz" deneni anakart seviyesinde çözüyoruz.
-
-Ne kadar erken müdahale, o kadar yüksek kurtarma şansı.</div>
-        <div class="dl"><a href="seri-2-su.png" download>⬇ İndir</a></div>
-        <div class="htag">#suyadüşentelefon #suhasarı #çanakkaletelefontamiri #anakarttamiri #telefontamiri #çanakkale #teknikservis</div>
+      <!-- Paket 3 -->
+      <div class="pkg pop">
+        <div class="popbadge">★ EN POPÜLER</div>
+        <div class="ptag">PAKET 3</div>
+        <h3>Haftada 3 Post + 1 Reels + 3 Story</h3>
+        <div class="price"><span class="amt">₺10.000</span><span class="per">/ ay</span></div>
+        <ul>
+          <li>Ayda 12 özgün gönderi tasarımı</li>
+          <li>Ayda 4 Reels videosu</li>
+          <li>Ayda 12 story tasarımı</li>
+          <li>Caption + hashtag + etkileşim yönetimi</li>
+          <li>Aylık strateji & performans raporu</li>
+        </ul>
+        <div class="thumbs-lbl">Örnek gönderilerimizden</div>
+        <div class="thumbs">
+          <img src="reklam-A-hizmet.png" alt=""><img src="seri-2-su.png" alt=""><img src="seri-4-bilgisayar.png" alt=""><img src="seri-5-veri.png" alt="">
+        </div>
+        <a class="btn gold" href="#iletisim">Bu Paketi Seç →</a>
       </div>
-    </div>
 
-    <div class="card">
-      <div class="imgwrap"><a href="seri-3-anakart.png" target="_blank"><img src="seri-3-anakart.png" alt="Anakart & Mikro Lehim"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 05</div>
-        <h2>Anakart & Mikro Lehim</h2>
-        <div class="cap">Telefonun hiç mi açılmıyor? Şarj almıyor, görüntü vermiyor mu? Mikroskop altında kart seviyesi onarım — başka servislerin "olmaz" dediğini çözüyoruz. Net fiyat, 12 ay garanti, ücretsiz arıza tespiti.
-
-📞 0538 247 66 33</div>
-        <div class="dl"><a href="seri-3-anakart.png" download>⬇ İndir</a></div>
-        <div class="htag">#anakarttamiri #mikrolehim #açılmayantelefon #çanakkaletelefontamiri #telefontamiri #çanakkale #teknikservis</div>
+      <!-- İletişim -->
+      <div id="iletisim">
+        <div class="t">Hemen başlayalım 🚀</div>
+        <div class="c">
+          Paketlerle ilgili her soru için bana ulaşın:<br>
+          <span class="ph">[ Adınız / Marka adınız ]</span><br>
+          📞 [ Telefon ] · 💬 [ WhatsApp ]
+        </div>
       </div>
-    </div>
-
-    <div class="card">
-      <div class="imgwrap"><a href="seri-4-bilgisayar.png" target="_blank"><img src="seri-4-bilgisayar.png" alt="Bilgisayar & Laptop"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 06</div>
-        <h2>Bilgisayar & Laptop</h2>
-        <div class="cap">Bilgisayarın mı yavaşladı, ısınıyor mu, açılmıyor mu? SSD/RAM yükseltme, format, fan ve ısınma bakımıyla uçar hale getiriyoruz. 12 ay garanti, ücretsiz arıza tespiti.
-
-💬 wa.me/905382476633</div>
-        <div class="dl"><a href="seri-4-bilgisayar.png" download>⬇ İndir</a></div>
-        <div class="htag">#bilgisayartamiri #laptoptamiri #ssdyükseltme #çanakkalebilgisayar #format #çanakkale #teknikservis</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="imgwrap"><a href="seri-5-veri.png" target="_blank"><img src="seri-5-veri.png" alt="Veri Kurtarma"></a></div>
-      <div class="meta">
-        <div class="num">REKLAM 07</div>
-        <h2>Veri Kurtarma</h2>
-        <div class="cap">Fotoğrafların, dosyaların mı silindi? Açılmayan telefon, bozuk hafıza kartı ve hard diskten veri kurtarma — gizlilik garantili. Ücretsiz ön inceleme.
-
-📞 0538 247 66 33 · 💬 WhatsApp</div>
-        <div class="dl"><a href="seri-5-veri.png" download>⬇ İndir</a></div>
-        <div class="htag">#verikurtarma #silinendosya #hafızakartı #harddisk #çanakkale #telefontamiri #teknikservis</div>
-      </div>
-    </div>
+    </aside>
 
   </div>
 
   <footer>
-    Tüm görseller 1080×1350 px, Instagram feed için optimize edilmiştir.<br>
-    📞 <b>0538 247 66 33</b> · 💬 wa.me/905382476633 · 📍 Selahi Aksoy Pasajı No:18/42 · Merkez/Çanakkale
+    Tüm reklam görselleri 1080×1350 px, Instagram feed için optimize edilmiştir.<br>
+    Bu teklif <b>Profesyonel Teknik Servis</b> için özel olarak hazırlanmıştır.
   </footer>
+
 </div></body></html>
